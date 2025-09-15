@@ -5,7 +5,7 @@ import path from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [svelte()],
-  base: process.env.NODE_ENV === 'production' ? '/portfolio-site/' : '/',
+  base: './',
   publicDir: "public",
   resolve: {
     alias: {
