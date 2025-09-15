@@ -61,11 +61,10 @@
                 >
                     <div class={`aspect-video overflow-hidden ${project.fit && !project.fill ? 'bg-white flex items-center justify-center' : ''}`}>
                         <img
-                            src={project.image ||
-                                "/placeholder.svg?height=200&width=400"}
+                            src={project.image ? `/${project.image}` : '/placeholder.svg?height=200&width=400'}
                             alt={project.title}
                             class={`${project.fill ? 'w-full h-full object-cover' : project.fit ? 'max-h-full h-full w-auto object-contain p-6' : 'w-full h-full object-cover'} group-hover:scale-105 transition-transform duration-300`}
-                            onerror="this.onerror=null;this.src='/placeholder.svg?height=200&width=400'"
+                            on:error={(e) => e.target.src = '/placeholder.svg?height=200&width=400'}
                         />
                     </div>
                     <div class="flex flex-col space-y-1.5 p-6">
