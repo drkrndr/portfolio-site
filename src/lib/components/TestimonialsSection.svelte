@@ -1,14 +1,16 @@
-<script>
+<script lang="ts">
     import { Star } from "lucide-svelte";
+    
+    import type { Testimonial } from '$lib/types';
 
-    const testimonials = [
+    const testimonials: Testimonial[] = [
         {
             name: "Sarah Chen",
             role: "CTO, TechFlow Solutions",
             content:
                 "The AI automation system transformed our customer service. Response times dropped from hours to seconds, and our team can now focus on strategic work instead of repetitive tasks.",
             rating: 5,
-            avatar: "/placeholder.svg?height=48&width=48",
+            avatar: "/placeholder.svg?height=48&width=48"
         },
         {
             name: "Marcus Rodriguez",
@@ -16,7 +18,7 @@
             content:
                 "Our supply chain dashboard provides insights we never had before. The real-time tracking and predictive analytics have saved us thousands in operational costs.",
             rating: 5,
-            avatar: "/placeholder.svg?height=48&width=48",
+            avatar: "/placeholder.svg?height=48&width=48"
         },
         {
             name: "Emily Watson",
@@ -24,7 +26,7 @@
             content:
                 "Working with Richard was exceptional. He understood our complex requirements and delivered a solution that exceeded expectations. Highly recommended!",
             rating: 5,
-            avatar: "/placeholder.svg?height=48&width=48",
+            avatar: "/placeholder.svg?height=48&width=48"
         },
     ];
 </script>

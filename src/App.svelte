@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Navigation from './lib/components/Navigation.svelte';
   import HeroSection from './lib/components/HeroSection.svelte';
   import ServicesSection from './lib/components/ServicesSection.svelte';
@@ -6,17 +6,22 @@
   import TestimonialsSection from './lib/components/TestimonialsSection.svelte';
   import ContactSection from './lib/components/ContactSection.svelte';
   import Footer from './lib/components/Footer.svelte';
+  
+  // Import global styles
+  import './app.css';
 </script>
 
-<main>
+<div class="min-h-screen bg-background text-foreground">
   <Navigation />
-  <HeroSection />
-  <ServicesSection />
-  <PortfolioSection />
-  <TestimonialsSection />
-  <ContactSection />
+  <main class="container mx-auto px-4 py-8">
+    <HeroSection />
+    <ServicesSection />
+    <PortfolioSection />
+    <TestimonialsSection />
+    <ContactSection />
+  </main>
   <Footer />
-</main>
+</div>
 
 <style>
   :global(html) {

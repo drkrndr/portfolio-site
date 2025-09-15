@@ -19,7 +19,7 @@ cp -r dist/* deploy/
 cd deploy
 git add .
 git commit -m "Deploy to GitHub Pages"
-git push https://github.com/drkrndr/portfolio-site.git gh-pages
+git push origin gh-pages
 
 # Clean up
 cd ..

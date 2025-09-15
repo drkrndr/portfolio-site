@@ -1,12 +1,19 @@
-<script>
+<script lang="ts">
     import { ExternalLink, Github } from "lucide-svelte";
+    
+    import type { Project } from '$lib/types';
 
-    const projects = [
+    function handleImageError(event: Event) {
+        const target = event.target as HTMLImageElement;
+        target.src = '/placeholder.svg?height=200&width=400';
+    }
+
+    const projects: Project[] = [
         {
             title: "Cryptocurrency Trading Bot",
             description:
                 "Real-time token sniping bot that identified high-potential trades with risk scoring, improving trade decision speed and reducing exposure to high-risk tokens by 60%.",
-            image: "drkrndrs-memecoin-trading-bot.svg",
+            image: "/drkrndrs-memecoin-trading-bot.svg",
             fit: false,
             fill: true,
             tags: ["AI/ML", "JavaScript", "Node.js", "APIs"],
@@ -20,8 +27,9 @@
             title: "ISO 20022 Compliant XML Validation API (Aegis)",
             description:
                 "Critical ISO 20022 validator that instantly detects message errors to prevent costly transaction failures. Ensure compliance and secure uninterrupted financial operations before errors escalate.",
-            image: "aegis.svg",
+            image: "/aegis.svg",
             fit: true,
+            fill: false,
             tags: ["Node.js", "Express.js", "libxmljs2", "REST"],
             metrics: [
                 "35% ↓ Projected Transaction Errors",
@@ -33,7 +41,9 @@
             title: "Document Processing System",
             description:
                 "Automated invoice processing system that reduced manual work by 80% and improved accuracy.",
-            image: "document-automation-ai.svg",
+            image: "/document-automation-ai.svg",
+            fit: false,
+            fill: true,
             tags: ["Python", "OCR", "Machine Learning", "AWS"],
             metrics: [
                 "80% ↓ Manual Work",
@@ -61,10 +71,10 @@
                 >
                     <div class={`aspect-video overflow-hidden ${project.fit && !project.fill ? 'bg-white flex items-center justify-center' : ''}`}>
                         <img
-                            src={project.image ? `/${project.image}` : '/placeholder.svg?height=200&width=400'}
+                            src={project.image || '/placeholder.svg?height=200&width=400'}
                             alt={project.title}
                             class={`${project.fill ? 'w-full h-full object-cover' : project.fit ? 'max-h-full h-full w-auto object-contain p-6' : 'w-full h-full object-cover'} group-hover:scale-105 transition-transform duration-300`}
-                            on:error={(e) => e.target.src = '/placeholder.svg?height=200&width=400'}
+                            on:error={handleImageError}
                         />
                     </div>
                     <div class="flex flex-col space-y-1.5 p-6">
