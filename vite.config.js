@@ -3,7 +3,7 @@ import { svelte } from "@sveltejs/vite-plugin-svelte";
 
 export default defineConfig({
   plugins: [svelte()],
-  base: "./",
+  base: process.env.NODE_ENV === 'production' ? '/portfolio-site/' : '/',
   publicDir: "public",
   build: {
     outDir: "dist",
