@@ -1,31 +1,29 @@
 #!/bin/bash
 
-# Exit on error
+# Exit on any error
 set -e
 
 # Build the project
 echo "Building the project..."
 npm run build
 
-# Create a temporary directory for the deployment
-echo "Preparing deployment..."
-rm -rf deploy
-git clone -b gh-pages --single-branch git@github.com:drkrndr/portfolio-site.git deploy
+# Navigate into the build output directory
+cd dist
 
-# Copy the built files
-cp -r dist/* deploy/
-
-# Commit and push the changes
-cd deploy
-# Add a .nojekyll file to disable Jekyll processing on GitHub Pages
+# Add a .nojekyll file to prevent Jekyll from running on GitHub Pages
 touch .nojekyll
-git add .
-git commit -m "Deploy to GitHub Pages"
-git push origin gh-pages
+
+# Initialize a new git repository and add the build files
+git init
+git add -A
+git commit -m 'Deploy to GitHub Pages'
+
+# Force push to the gh-pages branch
+echo "Deploying to GitHub Pages..."
+git push -f git@github.com:drkrndr/portfolio-site.git main:gh-pages
 
 # Clean up
-cd ..
-rm -rf deploy
+cd -
 
 echo "Deployment successful!"
-echo "Your site should be live at: https://drkrndr.github.io/portfolio-site/"
+echo "Your site is live at: https://drkrndr.github.io/portfolio-site/"
