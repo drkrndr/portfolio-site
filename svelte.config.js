@@ -1,11 +1,3 @@
-import adapter from "@sveltejs/adapter-static";
-
 export default {
-  kit: {
-    adapter: adapter({
-      pages: "build",
-      assets: "build",
-      fallback: null,
-    }),
-  },
+  // Remove kit configuration since this is a regular Svelte project, not SvelteKit
 };
