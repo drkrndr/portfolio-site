@@ -1,5 +1,11 @@
 <script>
-    import { Zap, Laptop, GitBranch, BarChart3 as Chart, ArrowRight } from "lucide-svelte";
+    import {
+        Zap,
+        Laptop,
+        GitBranch,
+        BarChart3 as Chart,
+        ArrowRight,
+    } from "lucide-svelte";
 
     const services = [
         {
@@ -20,7 +26,7 @@
             description:
                 "Modern, responsive web apps built with cutting-edge technologies for optimal performance.",
             features: [
-                "React, Next.js, Svelte, & Vite",
+                "React, Next.js, Node.js, Svelte, Vite",
                 "Real-time Features",
                 "API Integration",
                 "Web-First Design",
@@ -72,11 +78,20 @@
                 >
                     <div class="flex flex-col space-y-1.5 p-6">
                         <div class="flex items-center space-x-4">
-                            <div class="bg-primary/10 p-3 rounded-lg group-hover:bg-primary/20 transition-colors">
-                                <svelte:component this={service.icon} class="h-6 w-6 text-primary" />
+                            <div
+                                class="bg-primary/10 p-3 rounded-lg group-hover:bg-primary/20 transition-colors"
+                            >
+                                <svelte:component
+                                    this={service.icon}
+                                    class="h-6 w-6 text-primary"
+                                />
                             </div>
                             <div class="text-left">
-                                <h3 class="text-2xl font-semibold leading-none tracking-tight text-left">{service.title}</h3>
+                                <h3
+                                    class="text-2xl font-semibold leading-none tracking-tight text-left"
+                                >
+                                    {service.title}
+                                </h3>
                             </div>
                         </div>
                         <p

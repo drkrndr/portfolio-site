@@ -6,7 +6,7 @@
             title: "Cryptocurrency Trading Bot",
             description:
                 "Real-time token sniping bot that identified high-potential trades with risk scoring, improving trade decision speed and reducing exposure to high-risk tokens by 60%.",
-            image: "/drkrndrs-memecoin-trading-bot.svg",
+            image: "drkrndrs-memecoin-trading-bot.svg",
             fit: false,
             fill: true,
             tags: ["AI/ML", "JavaScript", "Node.js", "APIs"],
@@ -20,7 +20,7 @@
             title: "ISO 20022 Compliant XML Validation API (Aegis)",
             description:
                 "Critical ISO 20022 validator that instantly detects message errors to prevent costly transaction failures. Ensure compliance and secure uninterrupted financial operations before errors escalate.",
-            image: "/aegis.svg",
+            image: "aegis.svg",
             fit: true,
             tags: ["Node.js", "Express.js", "libxmljs2", "REST"],
             metrics: [
