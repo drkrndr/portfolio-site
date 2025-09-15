@@ -18,7 +18,7 @@
     error = '';
 
     try {
-      const response = await fetch('https://smartforms.dev/submit/68c79cedc184545ccc0ca1c7', { // <-- IMPORTANT: Replace with your Smart Forms endpoint
+      const response = await fetch('https://smartforms.dev/submit/YOUR_FORM_ID', { // <-- IMPORTANT: Replace with your Smart Forms endpoint
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
