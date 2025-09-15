@@ -11,10 +11,6 @@ A modern, responsive portfolio website showcasing freelance development projects
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [Development](#development)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
 
 ## ✨ Features
 
