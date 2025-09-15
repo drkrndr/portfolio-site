@@ -6,15 +6,38 @@
     "module": "ESNext",
     "resolveJsonModule": true,
     "allowJs": true,
-    "checkJs": true,
+    "checkJs": false,
     "isolatedModules": true,
     "baseUrl": ".",
     "paths": {
       "$lib": ["src/lib"],
       "$lib/*": ["src/lib/*"]
     },
-    "types": ["vite/client", "svelte"]
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "jsx": "preserve",
+    "jsxImportSource": "svelte",
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": ["./node_modules/@types"],
+    "types": ["node"],
+    "lib": ["DOM", "ES2020"],
+    "moduleDetection": "force"
   },
-  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte"],
+  "include": [
+    "src/**/*.d.ts",
+    "src/global.d.ts",
+    "src/svelte-env.d.ts",
+    "src/svelte-shim.d.ts",
+    "src/lib/types/**/*.d.ts",
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.svelte",
+    "playwright.config.*"
+  ],
+  "exclude": ["node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
