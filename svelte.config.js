@@ -1,7 +1,12 @@
-import { defineConfig } from 'vite'
-import { svelte } from '@sveltejs/vite-plugin-svelte'
+import adapter from "@sveltejs/adapter-static";
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [svelte()],
-})
+export default {
+  kit: {
+    adapter: adapter({
+      // default options are fine
+      pages: "build", // folder where static site will be output
+      assets: "build",
+      fallback: null,
+    }),
+  },
+};

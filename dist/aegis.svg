@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Aegis Logo</title>
+  <desc id="desc">Stylized capital letter A with an underline</desc>
+  <rect width="100%" height="100%" fill="white"/>
+  <g fill="none" stroke="#111111" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Letter A -->
+    <path d="M146 356 L256 120 L366 356" />
+    <path d="M198 270 H314" />
+    <!-- Underline -->
+    <path d="M176 402 H336" />
+  </g>
+</svg>
